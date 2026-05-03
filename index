@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karchin Global S.R.L. – Premium Meat Exports from Romania</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --crimson: #8B1A1A;
+    --gold: #C9973A;
+    --gold-light: #E8C06A;
+    --cream: #FAF6EF;
+    --dark: #1A1108;
+    --charcoal: #2D2416;
+    --mid: #5C4A2A;
+    --border: rgba(201,151,58,0.25);
+    --shadow: 0 20px 60px rgba(26,17,8,0.18);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ── */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,17,8,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 4rem;
+    height: 72px;
+  }
+  .logo-area { display: flex; align-items: center; gap: 14px; }
+  .logo-box {
+    width: 46px; height: 46px;
+    background: #fff;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .logo-box img { width: 100%; height: 100%; object-fit: contain; }
+  .logo-text { display: flex; flex-direction: column; }
+  .logo-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .logo-sub {
+    font-size: 0.6rem; color: var(--gold);
+    letter-spacing: 0.15em; text-transform: uppercase; margin-top: 3px;
+  }
+  nav { display: flex; gap: 2rem; align-items: center; }
+  nav a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none; font-size: 0.72rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  nav a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold); color: var(--dark) !important;
+    padding: 8px 20px; border-radius: 3px;
+    font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background:
+      linear-gradient(160deg, rgba(26,17,8,0.85) 0%, rgba(139,26,26,0.65) 50%, rgba(26,17,8,0.9) 100%),
+      url('https://images.unsplash.com/photo-1560781290-7dc94c0f8f4f?w=1800&q=80') center/cover no-repeat;
+    display: flex; align-items: center;
+    padding: 0 8%;
+    padding-top: 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9973A' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .hero-content { max-width: 700px; animation: fadeUp 1s ease both; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,151,58,0.15);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 16px; border-radius: 2px;
+    font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 1.8rem;
+    animation: fadeUp 1s ease 0.1s both;
+  }
+  .hero-badge::before { content: '★'; }
+  h1.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.08;
+    margin-bottom: 1.4rem;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+  h1.hero-title em { color: var(--gold); font-style: italic; }
+  .hero-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; color: rgba(255,255,255,0.78);
+    line-height: 1.7; max-width: 520px;
+    margin-bottom: 2.4rem;
+    animation: fadeUp 1s ease 0.3s both;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp 1s ease 0.4s both; }
+  .btn-primary {
+    background: var(--gold); color: var(--dark);
+    padding: 14px 32px; border: none; border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent; color: #fff;
+    padding: 14px 32px; border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 3px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+  .hero-stats {
+    position: absolute; bottom: 3rem; right: 8%;
+    display: flex; gap: 3rem;
+    animation: fadeUp 1s ease 0.5s both;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem; font-weight: 900;
+    color: var(--gold); line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.55); margin-top: 4px;
+  }
+
+  /* ── SECTION SHARED ── */
+  section { padding: 100px 8%; }
+  .section-tag {
+    font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-tag::after { content: ''; flex: 0 0 40px; height: 1px; background: var(--gold); }
+  h2.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900; line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 1.2rem;
+  }
+  .section-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; color: var(--mid);
+    line-height: 1.75; max-width: 560px;
+  }
+
+  /* ── ABOUT ── */
+  .about { background: var(--dark); }
+  .about .section-tag { color: var(--gold); }
+  .about h2.section-title { color: #fff; }
+  .about .section-desc { color: rgba(255,255,255,0.65); max-width: 100%; }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+    margin-top: 3.5rem;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-img {
+    width: 100%; aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+  .about-badge {
+    position: absolute; bottom: -1.5rem; right: -1.5rem;
+    background: var(--gold);
+    padding: 1.4rem 1.8rem;
+    border-radius: 3px;
+  }
+  .about-badge-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; font-weight: 900;
+    color: var(--dark); line-height: 1;
+  }
+  .about-badge-txt {
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--dark); opacity: 0.75; margin-top: 3px;
+  }
+  .about-points { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.2rem; }
+  .about-point { display: flex; gap: 1rem; align-items: flex-start; }
+  .about-point-icon {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    background: rgba(201,151,58,0.12);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .about-point-text { color: rgba(255,255,255,0.75); font-size: 0.88rem; line-height: 1.65; }
+  .about-point-text strong { color: var(--gold); }
+
+  /* ── PRODUCTS ── */
+  .products { background: var(--cream); }
+  .products-header { text-align: center; margin-bottom: 3.5rem; }
+  .products-header .section-tag { justify-content: center; }
+  .products-header .section-tag::after { display: none; }
+  .products-header .section-desc { margin: 0 auto; text-align: center; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .product-card {
+    background: #fff;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+  }
+  .product-card:first-child { grid-column: span 2; }
+  .product-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .product-card:first-child .product-img { height: 480px; }
+  .product-card:hover .product-img { transform: scale(1.04); }
+  .product-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(26,17,8,0.88) 100%);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 2rem;
+    pointer-events: none;
+  }
+  .product-cat {
+    font-size: 0.6rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.4rem;
+  }
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: #fff; margin-bottom: 0.3rem;
+  }
+  .product-detail { font-size: 0.78rem; color: rgba(255,255,255,0.65); }
+
+  /* Second row */
+  .products-row2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 2px;
+  }
+  .products-row2 .product-img { height: 300px; }
+
+  /* ── QUALITY ── */
+  .quality {
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--dark) 100%);
+    position: relative; overflow: hidden;
+  }
+  .quality::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,151,58,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .quality-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: center;
+  }
+  .quality h2.section-title { color: #fff; }
+  .quality .section-desc { color: rgba(255,255,255,0.65); }
+  .quality-grades { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+  .grade-row {
+    display: flex; align-items: center; gap: 1.2rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.03);
+    transition: background 0.2s;
+  }
+  .grade-row:hover { background: rgba(201,151,58,0.07); }
+  .grade-badge {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 900;
+    color: var(--gold); min-width: 50px; text-align: center;
+  }
+  .grade-info strong { display: block; color: #fff; font-size: 0.85rem; margin-bottom: 2px; }
+  .grade-info span { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+
+  .quality-features {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  }
+  .feat-box {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .feat-box:hover { background: rgba(201,151,58,0.07); transform: translateY(-3px); }
+  .feat-icon { font-size: 2rem; margin-bottom: 0.7rem; }
+  .feat-title { color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.4rem; }
+  .feat-desc { color: rgba(255,255,255,0.55); font-size: 0.78rem; line-height: 1.6; }
+
+  /* ── SPECS ── */
+  .specs { background: var(--cream); }
+  .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+  .spec-card {
+    background: #fff;
+    border: 1px solid rgba(201,151,58,0.15);
+    border-radius: 6px;
+    padding: 2rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .spec-card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+  .spec-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+  .spec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--dark); margin-bottom: 0.6rem;
+  }
+  .spec-list { list-style: none; }
+  .spec-list li {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 0.82rem; color: var(--mid);
+    padding: 5px 0; border-bottom: 1px solid #f0ebe0;
+    line-height: 1.5;
+  }
+  .spec-list li::before { content: '▸'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+
+  /* ── INQUIRY FORM ── */
+  .inquiry {
+    background: var(--dark);
+    position: relative; overflow: hidden;
+  }
+  .inquiry::after {
+    content: 'KG';
+    position: absolute; right: -2%; bottom: -5%;
+    font-family: 'Playfair Display', serif;
+    font-size: 22vw; font-weight: 900;
+    color: rgba(201,151,58,0.04);
+    line-height: 1; pointer-events: none; user-select: none;
+  }
+  .inquiry-inner {
+    display: grid; grid-template-columns: 1fr 1.5fr;
+    gap: 5rem; align-items: start;
+  }
+  .inquiry h2.section-title { color: #fff; }
+  .inquiry .section-desc { color: rgba(255,255,255,0.6); }
+  .inquiry-info { margin-top: 2rem; display: flex; flex-direction: column; gap: 1.2rem; }
+  .info-row { display: flex; gap: 1rem; align-items: flex-start; }
+  .info-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+  .info-text strong { display: block; color: var(--gold); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+  .info-text span { color: rgba(255,255,255,0.65); font-size: 0.85rem; }
+
+  .form-card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem; font-weight: 700;
+    color: var(--dark); margin-bottom: 0.3rem;
+  }
+  .form-subtitle { font-size: 0.8rem; color: var(--mid); margin-bottom: 1.8rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 1rem; }
+  .form-group label {
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--charcoal); font-weight: 600;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 14px;
+    border: 1.5px solid #e0d9cc;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem; color: var(--dark);
+    background: #FDFBF8;
+    transition: border-color 0.2s;
+    outline: none;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  .checkbox-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0.5rem; margin-top: 0.3rem;
+  }
+  .checkbox-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; color: var(--charcoal); cursor: pointer;
+  }
+  .checkbox-item input[type="checkbox"] {
+    width: 15px; height: 15px;
+    accent-color: var(--crimson);
+    cursor: pointer;
+    padding: 0; border: none;
+  }
+  .form-submit {
+    width: 100%;
+    background: var(--crimson); color: #fff;
+    padding: 14px; border: none; border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: #6E1414; transform: translateY(-2px); }
+
+  .success-msg {
+    display: none;
+    text-align: center; padding: 2rem;
+    background: #f0fbf0; border: 1px solid #b0ddb0;
+    border-radius: 4px; margin-top: 1rem;
+    color: #1a5c1a; font-size: 0.9rem; line-height: 1.6;
+  }
+  .success-msg .checkmark { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0f0a04;
+    color: rgba(255,255,255,0.5);
+    padding: 3rem 8% 2rem;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
+  .footer-brand .logo-name { font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .footer-brand p { font-size: 0.8rem; line-height: 1.7; max-width: 300px; margin-top: 0.8rem; }
+  .footer-col h4 {
+    color: var(--gold); font-size: 0.65rem;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .footer-col a, .footer-col p {
+    display: block; color: rgba(255,255,255,0.5);
+    text-decoration: none; font-size: 0.8rem;
+    margin-bottom: 0.5rem; transition: color 0.2s;
+    line-height: 1.6;
+  }
+  .footer-col a:hover { color: var(--gold); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.72rem;
+  }
+  .footer-bottom span { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    header { padding: 0 1.5rem; }
+    nav { display: none; }
+    section { padding: 70px 5%; }
+    .hero { padding: 0 5%; padding-top: 72px; }
+    .about-grid, .quality-grid, .inquiry-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .products-grid, .products-row2 { grid-template-columns: 1fr; }
+    .product-card:first-child { grid-column: span 1; }
+    .specs-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { position: static; margin-top: 2.5rem; justify-content: flex-start; }
+    .about-badge { display: none; }
+    .quality-features { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo-area">
+    <div class="logo-box">
+      <!-- KG Logo recreation using text/SVG since it's a black bg with KG initials -->
+      <svg viewBox="0 0 46 46" xmlns="http://www.w3.org/2000/svg" width="46" height="46">
+        <rect width="46" height="46" fill="#111"/>
+        <!-- Crown -->
+        <polygon points="10,18 15,10 23,15 31,10 36,18" fill="white" stroke="none"/>
+        <circle cx="10" cy="18" r="2" fill="white"/>
+        <circle cx="23" cy="14" r="2" fill="white"/>
+        <circle cx="36" cy="18" r="2" fill="white"/>
+        <!-- Shield shape -->
+        <path d="M12 19 L34 19 L34 30 L23 38 L12 30 Z" fill="none" stroke="white" stroke-width="2"/>
+        <!-- KG text -->
+        <text x="13" y="31" font-family="Arial Black" font-size="9" fill="white" font-weight="900">KG</text>
+      </svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">Karchin Global</span>
+      <span class="logo-sub">S.R.L. · Romania</span>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#quality">Quality</a>
+    <a href="#specs">Specifications</a>
+    <a href="#inquiry" class="nav-cta">Get a Quote</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">Romania's Premier Meat Exporter</div>
+    <h1 class="hero-title">
+      Premium Quality<br><em>Meat Exports</em><br>From the Heart of Romania
+    </h1>
+    <p class="hero-desc">
+      Supplying the finest sheep, beef, offals and salted casings to global markets. 
+      Fully Halal certified, fresh-frozen in 40ft FCL containers worldwide.
+    </p>
+    <div class="hero-actions">
+      <a href="#inquiry" class="btn-primary">Request a Quote</a>
+      <a href="#products" class="btn-outline">View Products</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Years Experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">40ft</div>
+      <div class="stat-label">Min. FCL Order</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">A·AB·BC</div>
+      <div class="stat-label">Quality Grades</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <img 
+        src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=800&q=80"
+        alt="Premium meat processing"
+        class="about-img"
+      />
+      <div class="about-badge">
+        <div class="about-badge-num">30+</div>
+        <div class="about-badge-txt">Years of<br>Excellence</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-tag" style="color:var(--gold)">Our Story</div>
+      <h2 class="section-title" style="color:#fff">Three Decades of<br>Trusted Expertise</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.65); max-width:100%">
+        Karchin Global S.R.L. is a Romanian meat trading and export company with over 30 years of 
+        industry expertise. Founded by a seasoned professional, we have built enduring relationships 
+        with buyers across the Middle East, Asia and beyond — delivering consistent quality, reliability 
+        and compliance with international standards.
+      </p>
+      <div class="about-points">
+        <div class="about-point">
+          <div class="about-point-icon">🐑</div>
+          <div class="about-point-text"><strong>Sheep:</strong> Whole carcasses from 10–50 kg, cut-to-order sizes available as per buyer specifications.</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-icon">🐄</div>
+          <div class="about-point-text"><strong>Beef/Cattle:</strong> 100–500 kg range. Cuts include striploin, forequarter, hindquarter and custom primals.</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-icon">✅</div>
+          <div class="about-point-text"><strong>Halal Certified:</strong> All products processed and certified per international Halal standards.</div>
+        </div>
+        <div class="about-point">
+          <div class="about-point-icon">🚢</div>
+          <div class="about-point-text"><strong>Export Ready:</strong> Minimum order: 1 × 40ft FCL frozen. Full documentation, health certificates included.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-header">
+    <div class="section-tag">Product Range</div>
+    <h2 class="section-title">What We Export</h2>
+    <p class="section-desc">
+      Fresh, frozen and chilled meat products sourced from premium Romanian livestock — 
+      processed to international food safety standards.
+    </p>
+  </div>
+
+  <div class="products-grid">
+    <!-- Featured large card -->
+    <div class="product-card">
+      <img 
+        src="https://images.unsplash.com/photo-1558030006-450675393462?w=1000&q=80"
+        alt="Premium sheep lamb meat"
+        class="product-img"
+      />
+      <div class="product-overlay">
+        <div class="product-cat">Ovine · Featured</div>
+        <div class="product-name">Whole Sheep & Lamb</div>
+        <div class="product-detail">10 – 50 kg | Custom cut sizes available | Halal Certified</div>
+      </div>
+    </div>
+    <!-- Second card -->
+    <div class="product-card">
+      <img 
+        src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=700&q=80"
+        alt="Premium beef cuts"
+        class="product-img"
+      />
+      <div class="product-overlay">
+        <div class="product-cat">Bovine</div>
+        <div class="product-name">Beef Cuts & Primals</div>
+        <div class="product-detail">100 – 500 kg | Striploin, Forequarter, Hindquarter</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-row2">
+    <div class="product-card">
+      <img 
+        src="https://images.unsplash.com/photo-1536818968680-deeec2e9fd11?w=600&q=80"
+        alt="Offals variety"
+        class="product-img"
+      />
+      <div class="product-overlay">
+        <div class="product-cat">Variety Meats</div>
+        <div class="product-name">Offals</div>
+        <div class="product-detail">Liver, Kidney, Lung, Tripe, Heart — Sheep & Cattle</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <img 
+        src="https://images.unsplash.com/photo-1601934023963-e3e78018f83d?w=600&q=80"
+        alt="Natural casings"
+        class="product-img"
+      />
+      <div class="product-overlay">
+        <div class="product-cat">Casings</div>
+        <div class="product-name">Salted Natural Casings</div>
+        <div class="product-detail">Sheep intestines 20/22 | All quality grades A, AB, BC</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <img 
+        src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80"
+        alt="Custom meat cuts"
+        class="product-img"
+      />
+      <div class="product-overlay">
+        <div class="product-cat">Custom Orders</div>
+        <div class="product-name">Bespoke Cuts</div>
+        <div class="product-detail">Size, weight, packaging as per buyer requirement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUALITY -->
+<section class="quality" id="quality">
+  <div class="quality-grid">
+    <div>
+      <div class="section-tag" style="color:var(--gold)">Grading System</div>
+      <h2 class="section-title">Quality You Can Trust</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.65)">
+        We supply across three internationally recognised quality tiers, giving buyers the flexibility 
+        to choose based on end-use requirements and budget — all maintained under strict cold-chain protocols.
+      </p>
+      <div class="quality-grades">
+        <div class="grade-row">
+          <div class="grade-badge">A</div>
+          <div class="grade-info">
+            <strong>Grade A — Premium</strong>
+            <span>Finest selection. Superior marbling, minimal fat cover, ideal for premium retail and restaurant supply.</span>
+          </div>
+        </div>
+        <div class="grade-row">
+          <div class="grade-badge">AB</div>
+          <div class="grade-info">
+            <strong>Grade AB — Choice</strong>
+            <span>High quality with excellent yield. Perfect for wholesale markets, hotel & catering industry.</span>
+          </div>
+        </div>
+        <div class="grade-row">
+          <div class="grade-badge">BC</div>
+          <div class="grade-info">
+            <strong>Grade BC — Standard</strong>
+            <span>Good commercial grade. Suitable for processing, industrial food production and mass catering.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="quality-features">
+      <div class="feat-box">
+        <div class="feat-icon">🥩</div>
+        <div class="feat-title">Fresh & Frozen</div>
+        <div class="feat-desc">Strict cold chain from slaughter to shipment. -18°C maintained throughout.</div>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon">☪️</div>
+        <div class="feat-title">Halal Certified</div>
+        <div class="feat-desc">All products carry valid Halal certification accepted globally.</div>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon">📋</div>
+        <div class="feat-title">Full Documentation</div>
+        <div class="feat-desc">Health certificates, vet inspection, ANAF compliance, export papers included.</div>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon">🌍</div>
+        <div class="feat-title">Global Shipping</div>
+        <div class="feat-desc">40ft FCL reefer containers shipped to Middle East, Asia, Africa and beyond.</div>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon">⚖️</div>
+        <div class="feat-title">Accurate Weight</div>
+        <div class="feat-desc">Certified weighing. Net weight guaranteed. Packing lists provided per pallet.</div>
+      </div>
+      <div class="feat-box">
+        <div class="feat-icon">🤝</div>
+        <div class="feat-title">30+ Yrs Trust</div>
+        <div class="feat-desc">Decades of reliable export relationships built on consistency and integrity.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section class="specs" id="specs">
+  <div class="products-header">
+    <div class="section-tag">Technical Details</div>
+    <h2 class="section-title">Product Specifications</h2>
+    <p class="section-desc">Detailed specifications for each product category to help buyers plan their orders.</p>
+  </div>
+  <div class="specs-grid">
+    <div class="spec-card">
+      <div class="spec-icon">🐑</div>
+      <div class="spec-title">Sheep & Lamb</div>
+      <ul class="spec-list">
+        <li>Whole carcasses: 10 – 50 kg</li>
+        <li>Custom cut sizes per buyer spec</li>
+        <li>Fresh, chilled or frozen</li>
+        <li>Halal slaughter certified</li>
+        <li>Vacuum-packed or block frozen</li>
+        <li>Health & vet certificate included</li>
+        <li>Min. order: 1 × 40ft FCL</li>
+      </ul>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🐄</div>
+      <div class="spec-title">Beef / Cattle</div>
+      <ul class="spec-list">
+        <li>Whole & half carcasses: 100 – 500 kg</li>
+        <li>Striploin, Forequarter, Hindquarter</li>
+        <li>Custom primals & boneless cuts</li>
+        <li>IQF or block frozen available</li>
+        <li>Individually vacuum-packed</li>
+        <li>Graded A, AB or BC</li>
+        <li>Min. order: 1 × 40ft FCL</li>
+      </ul>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🫀</div>
+      <div class="spec-title">Offals</div>
+      <ul class="spec-list">
+        <li>Sheep & cattle offals available</li>
+        <li>Liver, Kidney, Lung, Heart</li>
+        <li>Tripe, Tongue, Feet, Head</li>
+        <li>Fresh frozen, -18°C</li>
+        <li>Packed in standard cartons</li>
+        <li>Halal certified</li>
+        <li>Min. order: 1 × 40ft FCL</li>
+      </ul>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">🧵</div>
+      <div class="spec-title">Salted Casings</div>
+      <ul class="spec-list">
+        <li>Sheep intestines: 20/22 calibre</li>
+        <li>Cattle and hog casings available</li>
+        <li>Quality: Grade A, AB, BC</li>
+        <li>Salted &amp; preserved per standards</li>
+        <li>Hanks or tubed packing</li>
+        <li>Custom calibre on request</li>
+        <li>Min. order: 1 × 40ft FCL</li>
+      </ul>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">📦</div>
+      <div class="spec-title">Packaging & Shipping</div>
+      <ul class="spec-list">
+        <li>40ft FCL reefer containers</li>
+        <li>Temperature: -18°C (frozen)</li>
+        <li>Vacuum pack / carton box</li>
+        <li>Pallet or loose carton loading</li>
+        <li>FOB / CIF / CFR options</li>
+        <li>Delivery to all major ports</li>
+        <li>IBAN & Bank Transfer payment</li>
+      </ul>
+    </div>
+    <div class="spec-card">
+      <div class="spec-icon">📄</div>
+      <div class="spec-title">Documentation</div>
+      <ul class="spec-list">
+        <li>Commercial invoice & packing list</li>
+        <li>Veterinary health certificate</li>
+        <li>Halal certificate</li>
+        <li>Certificate of origin (Romania/EU)</li>
+        <li>Bill of lading</li>
+        <li>ANAF export declaration</li>
+        <li>Fumigation cert (if required)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- INQUIRY FORM -->
+<section class="inquiry" id="inquiry">
+  <div class="inquiry-inner">
+    <div>
+      <div class="section-tag" style="color:var(--gold)">Get In Touch</div>
+      <h2 class="section-title" style="color:#fff">Send Your<br>Buyer Inquiry</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.6)">
+        Tell us your requirements and our export team will respond within 24 hours with a 
+        competitive quote tailored to your needs.
+      </p>
+      <div class="inquiry-info">
+        <div class="info-row">
+          <div class="info-icon">🏢</div>
+          <div class="info-text">
+            <strong>Company</strong>
+            <span>Karchin Global S.R.L.</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div class="info-text">
+            <strong>Address</strong>
+            <span>Str. Speranței, Nr.6, Parter, SC.B, AP.21,<br>Sat Dudu Com. Chiajna, Ilfov, Romania</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📞</div>
+          <div class="info-text">
+            <strong>Phone / WhatsApp</strong>
+            <span>+40 722 339 775</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">✉️</div>
+          <div class="info-text">
+            <strong>Email</strong>
+            <span>ksanazct@gmail.com</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">🏦</div>
+          <div class="info-text">
+            <strong>Bank</strong>
+            <span>Garantibank BBVA Romania<br>IBAN: RO84UGBI0000492016928RON<br>SWIFT: UGBIROBU</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-title">Buyer Inquiry Form</div>
+      <div class="form-subtitle">Fields marked * are required. We respond within 24 hours.</div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="fname" placeholder="Your full name" required />
+        </div>
+        <div class="form-group">
+          <label>Company Name *</label>
+          <input type="text" id="company" placeholder="Company / Organisation" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" id="email" placeholder="you@company.com" required />
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp *</label>
+          <input type="tel" id="phone" placeholder="+1 234 567 8900" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Country *</label>
+          <input type="text" id="country" placeholder="Destination country" required />
+        </div>
+        <div class="form-group">
+          <label>Destination Port</label>
+          <input type="text" id="port" placeholder="e.g. Jeddah, Dubai, Karachi" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Products Interested In *</label>
+        <div class="checkbox-grid">
+          <label class="checkbox-item"><input type="checkbox" value="sheep_whole" /> Whole Sheep (10–50 kg)</label>
+          <label class="checkbox-item"><input type="checkbox" value="beef_primal" /> Beef Primals (100–500 kg)</label>
+          <label class="checkbox-item"><input type="checkbox" value="sheep_cut" /> Sheep Custom Cuts</label>
+          <label class="checkbox-item"><input type="checkbox" value="beef_cut" /> Beef Custom Cuts</label>
+          <label class="checkbox-item"><input type="checkbox" value="offals_sheep" /> Sheep Offals</label>
+          <label class="checkbox-item"><input type="checkbox" value="offals_cattle" /> Cattle Offals</label>
+          <label class="checkbox-item"><input type="checkbox" value="casings_sheep" /> Sheep Casings 20/22</label>
+          <label class="checkbox-item"><input type="checkbox" value="casings_cattle" /> Cattle Casings</label>
+        </div>
+      </div>
+
+      <div class="form-row" style="margin-top:0.5rem">
+        <div class="form-group">
+          <label>Preferred Quality Grade</label>
+          <select id="grade">
+            <option value="">Select grade</option>
+            <option value="A">Grade A – Premium</option>
+            <option value="AB">Grade AB – Choice</option>
+            <option value="BC">Grade BC – Standard</option>
+            <option value="mixed">Mixed grades</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Number of FCL Containers</label>
+          <select id="fcl">
+            <option value="">Select quantity</option>
+            <option value="1">1 × 40ft FCL (Minimum)</option>
+            <option value="2-5">2–5 × 40ft FCL</option>
+            <option value="6-10">6–10 × 40ft FCL</option>
+            <option value="10+">10+ × 40ft FCL</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Incoterm</label>
+          <select id="incoterm">
+            <option value="">Select term</option>
+            <option value="FOB">FOB – Free on Board</option>
+            <option value="CIF">CIF – Cost, Insurance & Freight</option>
+            <option value="CFR">CFR – Cost & Freight</option>
+            <option value="EXW">EXW – Ex Works</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Required Delivery Date</label>
+          <input type="date" id="delivery" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Additional Requirements / Specifications</label>
+        <textarea id="notes" placeholder="Custom cut sizes, weight per piece, packaging preferences, certifications needed, or any other details..."></textarea>
+      </div>
+
+      <button class="form-submit" onclick="submitForm()">
+        Send Inquiry to Karchin Global →
+      </button>
+
+      <div class="success-msg" id="successMsg">
+        <span class="checkmark">✅</span>
+        <strong>Inquiry Received!</strong><br>
+        Thank you for contacting Karchin Global S.R.L. Our export team will review your requirements 
+        and respond within 24 hours to the email address provided.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo-name" style="font-family:'Playfair Display',serif; color:#fff; font-size:1.3rem;">Karchin Global S.R.L.</div>
+      <span style="color:var(--gold); font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase;">Romania's Premium Meat Exporter</span>
+      <p>Over three decades of trusted expertise in meat trading and export. Supplying premium sheep, beef, offals and salted casings to global markets from Romania.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <a href="#products">Whole Sheep (10–50 kg)</a>
+      <a href="#products">Beef Cuts (100–500 kg)</a>
+      <a href="#products">Sheep & Cattle Offals</a>
+      <a href="#products">Salted Casings 20/22</a>
+      <a href="#products">Custom Cuts</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📞 +40 722 339 775</p>
+      <p>✉️ ksanazct@gmail.com</p>
+      <p>📍 Sat Dudu Com. Chiajna,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ilfov, Romania</p>
+      <p>🏦 CIF: RO44223357</p>
+      <p>📋 Reg: J23/7549/2022</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span style="color:rgba(255,255,255,0.4)">© 2025 Karchin Global S.R.L. All rights reserved. Romania.</span>
+    <span>Halal Certified · EU Compliant · 30+ Years Expertise</span>
+  </div>
+</footer>
+
+<script>
+function submitForm() {
+  const name = document.getElementById('fname').value.trim();
+  const company = document.getElementById('company').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const country = document.getElementById('country').value.trim();
+
+  if (!name || !company || !email || !phone || !country) {
+    alert('Please fill in all required fields (Name, Company, Email, Phone, Country).');
+    return;
+  }
+  if (!/\S+@\S+\.\S+/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Check at least one product selected
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  if (checkboxes.length === 0) {
+    alert('Please select at least one product you are interested in.');
+    return;
+  }
+
+  document.getElementById('successMsg').style.display = 'block';
+  document.querySelector('.form-submit').disabled = true;
+  document.querySelector('.form-submit').textContent = 'Inquiry Sent ✓';
+  document.querySelector('.form-submit').style.background = '#2d7d2d';
+
+  // Scroll to success message
+  document.getElementById('successMsg').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// Smooth scroll offset for fixed header
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.spec-card, .feat-box, .grade-row, .product-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
